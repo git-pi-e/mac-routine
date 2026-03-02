@@ -16,7 +16,7 @@ jobs:
         run: swift build -c release --arch arm64 --arch x86_64
 
       - name: Update Formula
-        uses: dawidd6/action-homebrew-bump-formula@v3
+        uses: dawidd6/action-homebrew-bump-formula@v7
         with:
           token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
           tap: ${{ github.repository_owner }}/homebrew-tap
