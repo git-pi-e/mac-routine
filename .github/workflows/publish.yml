@@ -24,3 +24,5 @@ jobs:
           tag: ${{ github.event.release.tag_name }}
           revision: ${{ github.event.release.target_commitish }}
           force: false
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}

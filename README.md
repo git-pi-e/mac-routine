@@ -59,3 +59,10 @@ Launch the application in daemon mode:
 
 The app will appear in your menu bar (⚡ icon).
 
+### Distribution (Homebrew)
+
+The project includes a GitHub Action to automatically publish/update a Homebrew formula on every release.
+To use this, you must:
+1. Create a [Personal Access Token (classic)](https://github.com/settings/tokens) with `public_repo` scope.
+2. Add it as a secret named `HOMEBREW_TAP_TOKEN` in your repository settings (Settings > Secrets and variables > Actions).
+3. Ensure you have a tap repository at `git-pi-e/homebrew-tap`.
