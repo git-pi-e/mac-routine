@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Hides the app from the Dock and App Switcher — menu bar only -->
+    <key>LSUIElement</key>
+    <true/>
+
+    <!-- Privacy descriptions (required for CoreLocation authorization prompts) -->
+    <key>NSLocationUsageDescription</key>
+    <string>MacRoutine uses your location to detect when you arrive at or leave a configured place.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>MacRoutine uses your location in the background to trigger routines automatically.</string>
+
+    <!-- Human-readable app name shown in permission dialogs -->
+    <key>CFBundleName</key>
+    <string>MacRoutine</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.local.MacRoutine</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+</dict>
+</plist>

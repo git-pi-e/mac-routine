@@ -1,0 +1,26 @@
+name: Publish to Homebrew
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  homebrew:
+    name: Update Homebrew Formula
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Release
+        run: swift build -c release --arch arm64 --arch x86_64
+
+      - name: Update Formula
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          tap: ${{ github.repository_owner }}/homebrew-tap
+          formula: mac-routine
+          tag: ${{ github.event.release.tag_name }}
+          revision: ${{ github.event.release.target_commitish }}
+          force: false
